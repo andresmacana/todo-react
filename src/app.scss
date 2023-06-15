@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+
+body {
+  font-family: "Share Tech Mono", monospace;
+  background-color: rgb(121, 121, 247);
+  color: #0008;
+
+  #app {
+    max-width: 980px;
+    margin: 50px auto;
+    padding: 0 15px;
+
+    h1 {
+      text-align: center;
+      font-weight: bolder;
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 100%;
+      margin: auto;
+
+      div.items,
+      form {
+        box-shadow: 0 0.5rem 1rem #00000026 !important;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 1rem;
+        margin-top: 50px;
+      }
+
+      form input {
+        border-radius: 1rem !important;
+        height: 50px;
+        width: 100%;
+        font-size: 25px !important;
+        margin-bottom: 15px;
+      }
+
+      form button {
+        width: 100%;
+      }
+
+      form input::placeholder {
+        color: #ccc !important;
+        font-size: 20px !important;
+      }
+      .items {
+        h2 {
+          text-align: center;
+          margin: 10px 0 25px 0;
+          font-size: 25px;
+        }
+        ol {
+          padding: 0;
+          counter-reset: section;
+        }
+        li {
+          margin-bottom: 15px;
+          padding: 15px 20px;
+          border-radius: 1rem;
+          background-color: #f0f0f0;
+          display: flex;
+          padding: 15px 10px 5px 20px;
+          justify-content: space-between;
+        }
+        li::before {
+          counter-increment: section;
+          content: counter(section) ". ";
+          position: absolute;
+        }
+        li h3 {
+          padding: 0;
+          margin: 0;
+          margin-left: 20px;
+          font-size: 20px;
+        }
+        button.delete {
+          background-color: rgb(150, 53, 53);
+          padding: 13px 15px;
+          margin-bottom: 5px;
+          margin-top: -3px;
+        }
+        button.delete:after {
+          content: "×";
+          line-height: 28px;
+          background-color: rgb(197, 57, 57);
+        }
+      }
+      button {
+        appearance: button;
+        background-color: #22d82b;
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: din-round, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        line-height: 20px;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        padding: 13px 16px;
+        text-align: center;
+        text-transform: uppercase;
+        touch-action: manipulation;
+        transform: translateZ(0);
+        transition: filter 0.2s;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        /* width: 100%; */
+        margin-bottom: 15px;
+      }
+      button:after {
+        background-clip: padding-box;
+        /* background-color: #f1715a; */
+        border: solid transparent;
+        border-radius: 16px;
+        border-width: 0 0 4px;
+        bottom: -4px;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .orange {
+        background-color: orange !important;
+        :after {
+          background-color: orange !important;
+        }
+      }
+
+      button:main,
+      button:focus {
+        user-select: auto;
+      }
+
+      button:hover:not(:disabled) {
+        filter: brightness(1.1);
+      }
+
+      button:disabled {
+        cursor: auto;
+      }
+    }
+  }
+}
